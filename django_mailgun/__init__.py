@@ -66,7 +66,7 @@ class MailgunBackend(BaseEmailBackend):
                             "from": from_email,
                          },
                      files={
-                            "message": StringIO(unicode(email_message.message().as_string(), errors="ignore")),
+                            "message": StringIO(email_message.message().as_string(), errors="ignore"),
                          }
                      )
         except:
